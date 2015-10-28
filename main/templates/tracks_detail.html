@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="box">
+            <div class="col-lg-12 text-center">
+                    <hr>
+                    <h2 class="intro-text text-center">This Track's Details:
+                    </h2>
+                    <hr>
+
+                        <strong>Title:</strong>     {{ object.track_title }}<br><hr>
+                        <strong>Artist:</strong>    {{ object.artist_name }}<br>
+                        <strong>Publisher:</strong>     {{ object.track_publisher }}<br><hr>
+                        <strong>Track Number:</strong>      {{ object.track_number }}<br>
+                        <strong>Track Duration:</strong>    {{ object.track_duration }}<br><hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

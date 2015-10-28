@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+ <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Here Is a List of Our Tracks:
+                    </h2>
+                    <hr>
+                </div>
+
+                    <div class="col-lg-12 text-center">
+                    {% for track in tracks %}
+                        {{ track.title }}
+                        <br>
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <a href="/tracks_detail/{{ track.track_id }}"> {{ track.artist_name }}|</a>
+                    {% endfor %}
+
+                    {# {% for object in object_list %}
+
+                        <a href="/tracks_detail/{{ object.track_handle }}"> {{ object.track_title }}</a>
+                    {% endfor %} #}
+                    <hr>
+                    <br>
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
