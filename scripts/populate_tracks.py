@@ -19,7 +19,7 @@ for data in response_dict['dataset']:
     #new_tracks.track_title = data['track_title']
     new_tracks.track_url = data['track_url']
     #new_tracks.track_image_field = data['track_image_field']
-    if artist_id != None:
+    if (data['artist_id']) != None:
         new_tracks.artist_id = int(data['artist_id'])
     new_tracks.artist_name = data['artist_name']
     new_tracks.artist_url = data['artist_url']
